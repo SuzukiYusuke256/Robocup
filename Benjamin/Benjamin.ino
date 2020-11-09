@@ -1,4 +1,4 @@
-/* Include & Define しいたけ*/
+/* Include & Define */
 #include "I2Cdev.h"
 #include "MPU6050_6Axis_MotionApps20.h"
 #include<SPI.h>
@@ -340,7 +340,7 @@ float getGyroPID() {
     const float Kp = 1.2, Ki = 0.2, Kd = 0.05, Imax = 80;
     static float pre_diff = 0, I = 0;
     static uint32_t pre_time = 0;
-    float gyro = getGyro();             // 現在の角度を取得
+    float gyro = getGyro();        // 現在の角度を取得
     uint32_t now_time = micros();  // 現在の時間を取得
     // エラーの時
     if (gyro >= 1000) {
